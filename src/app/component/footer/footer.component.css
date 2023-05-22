@@ -1,0 +1,21 @@
+.footer{
+    background-color: black;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer a{
+    display:inline;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
