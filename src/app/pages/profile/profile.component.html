@@ -1,0 +1,25 @@
+<body>
+    <div class="container">
+      <div class="profile">
+       <div class="imagen"><img src="{{miUser.photo}}" alt=""></div> 
+        <h1>{{miUser.name}}</h1>
+        
+          <input type="text" value = "{{miUser.name}}">
+          <input type="text" value = "{{miUser.last_name}}">
+          <input type="text" value = "{{miUser.email}}">
+    
+      </div>
+      <div class="form">
+        <h2>Editar datos</h2>
+        <div>
+          <input type="text" placeholder="Name" #inputName>
+          <input type="text" placeholder="Apellido" #inputLastName>
+          <input type="text" placeholder="Correo" #inputEmail>
+          <input type="text" placeholder="url" #inputPhoto>
+
+        
+          <button (click)="cambiar(inputName, inputLastName, inputEmail, inputPhoto)">Modificar</button>
+        </div>
+      </div>
+    </div>
+  </body>

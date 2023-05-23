@@ -6,15 +6,15 @@
 
 }
 .header{
-    background-color: rgb(33, 122, 100);
-    height: 100px;
+    background-color: rgb(58, 77, 67);
+    height: 120px;
 
     display: flex;
     align-items: center;
 }
 
 .header p{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     color: white;
     margin-left: 20px;
