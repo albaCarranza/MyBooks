@@ -7,7 +7,7 @@
 }
 .header{
     background-color: rgb(58, 77, 67);
-    height: 120px;
+    height: 100px;
 
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     font-weight: bold;
     color: white;
     margin-left: 20px;
-    margin-right: 1400px;
+    margin-right: 1000px;
 }
 
 .header a{
