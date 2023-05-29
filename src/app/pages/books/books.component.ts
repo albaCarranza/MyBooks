@@ -22,8 +22,10 @@ export class BooksComponent {
       this.miBook = [encontrar]
     } 
     else {
+    alert('¡Ups! El libro con el ID especificado no existe');
     this.miBook = this.booksService.getAll()
     }
+  
   }
 
   borrar(noBook: Book) {

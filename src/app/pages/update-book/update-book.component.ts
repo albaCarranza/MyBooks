@@ -14,10 +14,10 @@ export class UpdateBookComponent {
     const book: Book = new Book(title, type, author, price, photo, id_book);
     const funciona = this.bookService.edit(book);
     if (funciona) {
-      alert('Libro editado');
+      alert('Has editado tu libro correctamente');
     } 
     else{
-      alert('No se ha podido editar')
+      alert('Oh oh... Parece que tu libro no se ha podido editar')
     }
   }
  
