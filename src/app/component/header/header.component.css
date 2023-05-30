@@ -27,3 +27,11 @@
     color: white;
     font-weight: bold;
 }
+
+.active{
+    padding: 7px;
+    border-radius: 5px;
+    background-color: rgb(189, 205, 190);
+    background: linear-gradient(180deg, #cae0c8 0%, #4b6048 100%);
+    transition: all .3s;
+}

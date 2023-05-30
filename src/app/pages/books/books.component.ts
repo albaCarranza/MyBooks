@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-books',
@@ -8,11 +9,12 @@ import { BooksService } from 'src/app/shared/books.service';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent {
+  
   public miBook: Book[];
   public searchTerm: string;
 
 
-  constructor(public booksService: BooksService) {
+  constructor(public booksService: BooksService, private toastr: ToastrService) {
     this.miBook = this.booksService.getAll()
   }
 
@@ -22,8 +24,8 @@ export class BooksComponent {
       this.miBook = [encontrar]
     } 
     else {
-    alert('¡Ups! El libro con el ID especificado no existe');
-    this.miBook = this.booksService.getAll()
+      this.toastr.error('¡Ups! El libro con el ID especificado no existe');
+      this.miBook = this.booksService.getAll()
     }
   
   }
@@ -31,6 +33,7 @@ export class BooksComponent {
   borrar(noBook: Book) {
     let borrado = this.booksService.delete(noBook.id_book)
     if (borrado) {
+      
       this.miBook = this.booksService.getAll()
     }
   }

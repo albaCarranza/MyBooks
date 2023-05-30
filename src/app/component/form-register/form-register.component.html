@@ -1,22 +1,54 @@
-
-<div class="formulario">
-    <div class="form">
-        
-        <div class="p">Registrate</div>
-        <input type="text" placeholder="Nombre">
-        
-        <input type="text" placeholder="Apellidos">
-        
-        <input type="text" placeholder="Email">
-        
-        <input type="text" placeholder="Url">
-        
-        <input type="text" placeholder="Contraseña">
-        
-        <input type="text" placeholder="Repetir Contraseña">
-        
-        <p>
-    
-        <button type="button" onclick="">Registrarse</button>
-        </p>
+<div class="contenido">
+    <div class="main">
+        <form [formGroup]="myForm">
+            <div class="form-group mt-4">
+                <div class="p">Registrate</div>
+                <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre"
+                [ngClass]="{'is-invalid': (myForm.get('nombre').dirty || myForm.get('nombre').touched) && !myForm.get('nombre').valid}">
+                <div *ngIf="!myForm.get('nombre').valid" class="invalid-feedback">
+                    El nombre es necesario
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Apellidos" formControlName="apellidos"
+                [ngClass]="{'is-invalid': (myForm.get('apellidos').dirty || myForm.get('apellidos').touched) && !myForm.get('apellidos').valid}">
+                <div *ngIf="!myForm.get('apellidos').valid" class="invalid-feedback">
+                    Los apellidos son necesarios
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" formControlName="email"
+                [ngClass]="{'is-invalid': (myForm.get('email').dirty || myForm.get('email').touched) && !myForm.get('email').valid}">
+                <div *ngIf="!myForm.get('email').valid" class="invalid-feedback">
+                    El email es necesario
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Url" formControlName="url"
+                [ngClass]="{'is-invalid': (myForm.get('url').dirty || myForm.get('url').touched) && !myForm.get('url').valid}">
+                <div *ngIf="!myForm.get('url').valid" class="invalid-feedback">
+                    La URL es necesaria
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Contraseña" formControlName="password"
+                [ngClass]="{'is-invalid': (myForm.get('password').dirty || myForm.get('password').touched) && !myForm.get('password').valid}">
+                <div *ngIf="!myForm.get('password').valid" class="invalid-feedback">
+                    <div *ngIf="myForm.get('password').errors.required">La contraseña es obligatoria</div>
+                    <div *ngIf="myForm.get('password').errors.minlength">La contraseña debe tener al menos 8 caracteres</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Repetir contraseña" formControlName="repetirPassword" 
+                [ngClass]="{'is-invalid': (myForm.get('repetirPassword').dirty || myForm.get('repetirPassword').touched) && !myForm.get('repetirPassword').valid}">
+                <div *ngIf="!myForm.get('repetirPassword').valid" class="invalid-feedback">
+                    <div *ngIf="myForm.get('repetirPassword').errors.required">La contraseña es obligatoria</div>
+                    <div *ngIf="!myForm.get('repetirPassword').errors.required && myForm.get('repetirPassword').errors.matchPassword">Las claves no coinciden</div>
+                </div>
+            </div>
+            <p>
+                <button type="button" (click)="register()" [disabled]="myForm.invalid">Registrarse</button>
+            </p>
+        </form>
     </div>
+</div>

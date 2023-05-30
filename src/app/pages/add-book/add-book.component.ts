@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-add-book',
   templateUrl: './add-book.component.html',
@@ -8,7 +9,7 @@ import { BooksService } from 'src/app/shared/books.service';
 })
 export class AddBookComponent {
 
-  constructor(public bookService: BooksService)
+  constructor(public bookService: BooksService, private toastr: ToastrService)
   {
     
   }
@@ -18,7 +19,7 @@ export class AddBookComponent {
     const newBook = new Book(newTitle.value, newType.value, newAuthor.value, parseInt(newPrice.value), newPhoto.value, parseInt(newid_book.value));
     this.bookService.add(newBook);
     console.log(this.bookService);
-    alert ('¡Tu libro se ha añadido correctamente!')
+    this.toastr.success('¡Tu libro se ha añadido correctamente!');
   }
 }
 
