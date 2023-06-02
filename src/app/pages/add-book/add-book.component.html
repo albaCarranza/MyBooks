@@ -1,0 +1,20 @@
+
+<div class="formulario">
+    <div class="form">
+        
+        <div class="p">Añadir libros</div>
+        <input type="text" placeholder="Titulo" #inputTitle>
+        
+        <input type="text" placeholder="Tapa blanda/dura" #inputType>
+        
+        <input type="text" placeholder="Autor" #inputAuthor>
+        
+        <input type="text" placeholder="Precio" #inputPrice>
+        
+        <input type="text" placeholder="Photo" #inputPhoto>
+        
+        <input type="text" placeholder="Codigo Libro" #inputId_Book>
+        
+        <button (click)="agregar(inputTitle, inputType, inputAuthor, inputPrice, inputPhoto, inputId_Book)">Insetar Libro</button>
+    </div>
+

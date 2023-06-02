@@ -7,7 +7,7 @@
 }
 .header{
     background-color: rgb(58, 77, 67);
-    height: 120px;
+    height: 100px;
 
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     font-weight: bold;
     color: white;
     margin-left: 20px;
-    margin-right: 1400px;
+    margin-right: 1000px;
 }
 
 .header a{
@@ -26,4 +26,12 @@
     margin: 20px;
     color: white;
     font-weight: bold;
+}
+
+.active{
+    padding: 7px;
+    border-radius: 5px;
+    background-color: rgb(189, 205, 190);
+    background: linear-gradient(180deg, #cae0c8 0%, #4b6048 100%);
+    transition: all .3s;
 }

@@ -1,0 +1,22 @@
+
+<div class="formulario">
+    <div class="form">
+        
+        <div class="p">Modificar Libro</div>
+        
+        <input type="text" placeholder="Titulo" #inputTitle>
+
+        <input type="text" placeholder="Tapa blanda/dura" #inputType>
+
+        <input type="text" placeholder="Autor" #inputAuthor>
+
+        <input type="text" placeholder="Precio" #inputPrice>
+
+        <input type="text" placeholder="Photo" #inputPhoto>
+        
+        <input type="text" placeholder="Codigo Libro" #inputId_Book>
+        <p>
+    
+            <button (click)="modifyBook(inputTitle.value, inputType.value, inputAuthor.value, inputPrice.value, inputPhoto.value, inputId_Book.value)">Modificar Libro</button>
+        </p>
+    </div>

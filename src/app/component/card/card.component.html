@@ -1,0 +1,24 @@
+<div class="caja">
+<div class="container1">
+    <div class="row" style="padding-top: 50px;">
+    <div class="card" style="width: 18rem;">
+        <img src="{{book_Padre.photo}}" class="card-img-top" alt="...">
+        
+        <div class="card-body">
+          <p class="card-text">{{book_Padre.type}}</p>
+          <p class="card-text">{{book_Padre.author}}</p>
+          <h5 class="card-title">{{book_Padre.title}}</h5>
+          <p class="card-text">{{book_Padre.price}}€</p>
+          <p class="card-text">{{book_Padre.id_book | color}}</p>
+          <a href="#" class="btn" [ngClass] = "esPar === true ? 'par' : 'impar'">Comprar</a>
+
+
+          <button type="button" class="btn-close" aria-label="Close" (click)="cerrarTarjeta()"></button>
+
+
+        </div>
+    
+      </div>
+    </div>
+</div>
+</div>
