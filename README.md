@@ -1,4 +1,4 @@
-# MyBooks
+# MyBooks This is a website development project where you can consult your books, upload, edit, delete...
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
